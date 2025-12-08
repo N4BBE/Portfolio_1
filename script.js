@@ -15,6 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+    const navItems = document.querySelectorAll('.nav-links .nav-link');
+    navItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+
 // Menu Toggle Functionality
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -22,4 +30,5 @@ const navLinks = document.querySelector('.nav-links');
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
+    
 });
